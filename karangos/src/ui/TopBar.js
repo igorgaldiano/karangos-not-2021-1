@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import {logoImg} from '../img/Karangos.png'
+import logoImg from '../img/karangos.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {

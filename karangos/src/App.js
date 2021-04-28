@@ -21,7 +21,7 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <ThemeProvider them={theme}>
+    <ThemeProvider theme={theme}>
       <TopBar/>
     </ThemeProvider>
 
