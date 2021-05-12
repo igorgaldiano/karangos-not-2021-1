@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-
 import logoImg from '../img/karangos.png'
 import MainMenu from './MainMenu'
 
@@ -13,9 +12,9 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-   logo: {
-     width: '300px'
-   }
+  logo: {
+    width: '300px'
+  }
 }));
 
 export default function TopBar() {
@@ -25,10 +24,8 @@ export default function TopBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-        
-          <MainMenu/>
-          <img src ={logoImg} className={classes.logo}alt="LogoTipo Karangos" />
-          
+          <MainMenu />
+          <img src={logoImg} className={classes.logo} alt="Logotipo Karangos" />
         </Toolbar>
       </AppBar>
     </div>

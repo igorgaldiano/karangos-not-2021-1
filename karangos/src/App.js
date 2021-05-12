@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 //import Button from '@material-ui/core/Button' 
 import TopBar from './ui/TopBar'
 import {Box} from '@material-ui/core'
@@ -11,6 +11,7 @@ import yellow from '@material-ui/core/colors/yellow';
 import pink from '@material-ui/core/colors/pink';
 import KarangosList from './routed/KarangosList'
 import KarangosForm from './routed/KarangosForm'
+
 const theme = createMuiTheme({
   palette: {
     type: 'dark',
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) =>
 ({
   box: {
     backgroundColor: theme.palette.background.default,
-    minHeght: '100vh' // 100% da altura da area visivel
+    minHeight: '100vh' // 100% da altura da area visivel
     },
     routed: {
       padding: '25px',
@@ -66,10 +67,10 @@ function Main(){
 }
 
 function App() {
- 
+    
   return ( // 
     <ThemeProvider theme={theme}> 
-     <Main/>
+      <Main/>
     </ThemeProvider>
 
   );

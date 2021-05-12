@@ -1,6 +1,6 @@
 
-import { Typography } from '@material-ui/core'
-import Toolbar from '@material-ui/core/Toolbar'
+import { Typography, Toolbar } from '@material-ui/core'
+//import Toolbar from '@material-ui/core/Toolbar'
 import {makeStyles}from '@material-ui/core/styles'
 import LocalCafeTwoToneIcon from '@material-ui/icons/LocalCafeTwoTone';
 
@@ -8,10 +8,11 @@ const useStyles = makeStyles((theme) => ({
    text: {
       //backgroundColor: 'yellow',
       width: '100%',
+      color: theme.palette.text.secondary
     
     },
 
-    toobar: {
+    toolbar: {
         backgroundColor: theme.palette.background.paper,
         minHeight: '42px',
         //Posicionando a barra no rodape da pagina
