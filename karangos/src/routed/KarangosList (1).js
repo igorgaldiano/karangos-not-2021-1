@@ -17,8 +17,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Button from '@material-ui/core/Button'
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import { useHistory } from 'react-router-dom'
-import { Snackbar } from '@material-ui/core';
-
+import ConfirmDialog from '../ui/ConfirmDialog'
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -62,28 +61,13 @@ export default function KarangosList() {
   }
 
   useEffect(() => {
-    const getData = async () => {}
-    async function deleteItem(){
+    const getData = async () => {
       try {
-        await axios.delete(`' https://api.faustocintra.com.br/karangos/${deletable}
-        g
-        `)
-        getData() //Atualiza os dados da tabela
-        setSnackState({...snackState,open:true})
         let response = await axios.get('https://api.faustocintra.com.br/karangos?by=marca,modelo')
         setKarangos(response.data)
-        setSnackState({...snackState, open:true}) // Exibe a snackbar de sucesso
       }
       catch(error) {
-        //Mostra a snackbar de erro
-        setSnackState({
-          open:true,
-          severity:'error',
-          message: 'ERRO: ' + error.message
-
-        })
         console.error(error)
-
       }
     }
     getData()
